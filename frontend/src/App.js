@@ -5,7 +5,7 @@ function App() {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    fetch('https://portfolio-node-backend-kkm2.onrender.com/')
+      fetch(process.env.REACT_APP_BACKEND_URL)
       .then(res => res.text())
       .then(data => setMessage(data));
   }, []);

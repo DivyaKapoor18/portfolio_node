@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 4000;
 
 
 app.use(cors({
-  origin: 'https://portfolio-node-frontend.vercel.app/', // or 5173 for Vite
+  origin: process.env.FRONTEND_URL,
 }));
 
 app.get('/', (req, res) => {
